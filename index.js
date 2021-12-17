@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/userRoutes");
 const postRoute = require("./routes/postsRoutes");
+const categoriesRoute = require("./routes/categoriesRoutes");
 
 dotenv.config();
 // app.use(cors());
@@ -28,6 +29,7 @@ mongoose.connect(process.env.DB_URI, {
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
+app.use("/api/categories", categoriesRoute);
 
 
 
