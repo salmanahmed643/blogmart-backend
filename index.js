@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/userRoutes");
+const postRoute = require("./routes/postsRoutes");
 
 dotenv.config();
 // app.use(cors());
@@ -26,6 +27,7 @@ mongoose.connect(process.env.DB_URI, {
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
+app.use("/api/posts", postRoute);
 
 
 
