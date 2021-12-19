@@ -21,7 +21,7 @@ app.use("/images", express.static(path.join(__dirname, "/images")));
 
 mongoose.connect(process.env.DB_URI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useUnifiedTopology: true
 })
 .then((data) => {
     console.log(`mongodb connected with server: ${data.connection.host}`);
@@ -49,7 +49,6 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoriesRoute);
-
 
 
 
